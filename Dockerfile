@@ -23,7 +23,7 @@ RUN apt-get install -y xz-utils lbzip2 unzip && \
 # http://switchbrew.org/index.php?title=Setting_up_Development_Environment
 RUN mkdir /tmp/devkitpro/ && cd /tmp/devkitpro/ && \
     wget -q -O devkit.pl ${LIBNX_DEVKITA64_URL}
-RUN cd /tmp/devkitpro/ && chmod +x ./devkit.pl && ./devkit.pl /opt/devkitpro
+RUN cd /tmp/devkitpro/ && chmod +x ./devkit.pl && sleep 1 && ./devkit.pl /opt/devkitpro
 
 # Switch the current context to the runtime user.
 USER app
